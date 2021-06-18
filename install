@@ -1,0 +1,49 @@
+#!/bin/bash
+#powered by bi11ciph3r
+#this code is opensource. feel free to edit or customize it.
+
+
+echo "Checking if eligible for root permissions."
+
+#sudo ./install
+sudo echo "zsh autoinstaller is now installing...
+"
+echo "Checking network connection...
+"
+ping -c 4 www.google.com
+echo "Setup is now installing requirements...
+"
+#pacman -S zsh zsh-completions lsb-release
+./os/installer
+echo "Preparing Installer...
+"
+cp zshrc .zshrc
+sleep 5
+echo "Please Wait...
+"
+echo "Copying Plugins.
+"
+sleep 2
+chmod -R 755 plugins
+cp -r plugins/ /usr/share/zsh
+echo "Copying zsh configuration to User's folder.
+"
+sleep 2
+chmod -R 777 .zshrc
+cp -r .zshrc ~/
+echo "Copying zsh configuration to /root.
+"
+sleep 2
+cp -r .zshrc /root
+sleep 3
+echo "Changing permissions...
+"
+
+chmod -R 777 ~/.zshrc
+chmod -R 777 /root/.zshrc
+sleep 2
+echo "Installation Finished. If any problem persists, please contact bi11ciph3r."
+echo ""exiting..."
+
+exit
+exit
