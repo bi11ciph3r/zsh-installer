@@ -1,7 +1,6 @@
 #!/bin/bash
-#powered by bi11ciph3r
-#this code is opensource. feel free to edit or customize it.
-
+#powered by amal
+#this code is always opensource. feel free to edit or customize it.
 
 echo "Checking if eligible for root permissions."
 
@@ -39,11 +38,15 @@ sleep 3
 echo "Changing permissions...
 "
 
-chmod -R 777 ~/.zshrc
+chmod -R 777 /home/*/.zshrc
 chmod -R 777 /root/.zshrc
 sleep 2
-echo "Installation Finished. If any problem persists, please contact bi11ciph3r."
-echo ""exiting..."
+echo "Finishing touches. please wait..."
+sleep 5
+touch /usr/share/zsh/plugins/zsh-syntax-highlighting/.version
+touch /usr/share/zsh/plugins/zsh-syntax-highlighting/.revision-hash
+echo "Installation Finished. Please run chsh -s /bin/zsh for each user to change shell manually."
+echo "exiting..."
 
 exit
 exit
