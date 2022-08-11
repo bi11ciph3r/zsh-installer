@@ -5,7 +5,7 @@ sudo apt-get install zsh zsh-completions lsb-release
 
 echo "Installing for archlinux..."
 ##arch-linux
-sudo pacman -S zsh zsh-completions lsb-release
+yes | sudo pacman -S zsh zsh-completions lsb-release
 
 echo "Installing for fedora..."
 ##fedora
