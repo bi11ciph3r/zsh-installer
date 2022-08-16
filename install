@@ -33,12 +33,12 @@ cp -r .zshrc ~/
 echo "Copying zsh configuration to /root.
 "
 sleep 2
-cp -r .zshrc /root
+cp -r .zshrc /root/
 sleep 3
 echo "Changing permissions...
 "
 
-chmod -R 777 /home/*/.zshrc
+chmod -R 777 ~/.zshrc
 chmod -R 777 /root/.zshrc
 sleep 2
 echo "Finishing touches. please wait..."
